@@ -17,19 +17,41 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
-    We are launching soon! Subscribe and get notified Notify Me &copy; Copyright
-    Ping. All rights reserved.
+    <header>
+      <img src="./images/logo.svg" alt="logo PING." />
+    </header>
+    <main>
+      <h1>We are launching soon!</h1>
+      <p>Subscribe and get notified</p>
+      <form action="">
+        <label for="email">Your email address</label>
+        <input id="email" type="text" />
+        <button type="submit">Notify Me</button>
+      </form>
+      <img src="./images/illustration-dashboard.png" alt="" />
+      <i class="fa-brands fa-facebook-f fa-2x"></i>
+      <i class="fa-brands fa-twitter fa-2x"></i>
+      <i class="fa-brands fa-instagram fa-2x"></i>
+    </main>
 
     <footer>
+      <div>&copy; Copyright Ping. All rights reserved.</div>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="https://github.com/Muniox">Muniox</a>.
       </p>
     </footer>
   </body>
