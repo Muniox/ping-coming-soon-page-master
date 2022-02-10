@@ -28,25 +28,40 @@
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
-    <header>
-      <img src="./images/logo.svg" alt="logo PING." />
+    <header class="site-logo-container">
+      <img class="site-logo" src="./images/logo.svg" alt="logo PING." />
     </header>
-    <main>
-      <h1>We are launching soon!</h1>
-      <p>Subscribe and get notified</p>
-      <form action="">
-        <label for="email">Your email address</label>
-        <input id="email" type="text" />
-        <button type="submit">Notify Me</button>
+    <main class="site-preview">
+      <h1 class="site-preview__title">We are launching soon!</h1>
+      <p class="site-preview__sub-text">Subscribe and get notified</p>
+      <form action="" class="site-preview__form">
+        <label for="email" class="site-preview__form-label"
+          >Your email address</label
+        >
+        <input
+          id="email"
+          class="site-preview__form-input"
+          type="text"
+          placeholder="Your email address"
+        />
+        <button type="submit" class="site-preview__form-button">
+          Notify Me
+        </button>
       </form>
-      <img src="./images/illustration-dashboard.png" alt="" />
+      <img
+        class="site-preview__image"
+        src="./images/illustration-dashboard.png"
+        alt=""
+      />
       <i class="fa-brands fa-facebook-f fa-2x"></i>
       <i class="fa-brands fa-twitter fa-2x"></i>
       <i class="fa-brands fa-instagram fa-2x"></i>
     </main>
 
     <footer>
-      <div>&copy; Copyright Ping. All rights reserved.</div>
+      <div class="site-preview__copyright">
+        &copy; Copyright Ping. All rights reserved.
+      </div>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

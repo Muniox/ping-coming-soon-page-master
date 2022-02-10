@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 1px solid green;
 }
 
 :root {
@@ -34,4 +35,19 @@ body {
 
 .fa-brands {
   color: var(--blue);
+}
+
+.site-logo-container {
+  text-align: center;
+}
+
+.site-logo {
+  vertical-align: middle;
+}
+
+.site-preview {
+  &__image {
+    width: 100%;
+    height: auto;
+  }
 }
