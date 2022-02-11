@@ -118,6 +118,10 @@ body {
   color: var(--pale-blue);
 }
 
+.site-preview__form-input:focus-visible {
+  outline: solid var(--pale-blue);
+}
+
 .site-preview__form-button {
   font-size: 12px;
   font-weight: 600;

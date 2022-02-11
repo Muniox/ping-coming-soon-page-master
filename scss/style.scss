@@ -97,6 +97,10 @@ body {
     &::placeholder {
       color: var(--pale-blue);
     }
+
+    &:focus-visible {
+      outline: solid var(--pale-blue);
+    }
   }
 
   &__form-button {
