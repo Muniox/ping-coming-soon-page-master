@@ -50,6 +50,9 @@ button.addEventListener("click", () =>
 emailInput.addEventListener("click", () => resetMessage());
 emailInput.addEventListener("input", () => resetMessage());
 form.addEventListener("submit", (e) => {
-  if (isCorrectEmail(emailInput, regex) === false) e.preventDefault();
-  else if (isCorrectEmail(emailInput, regex) === true) return true;
+  if (isCorrectEmail(emailInput, regex) === false) {
+    e.preventDefault();
+  } else if (isCorrectEmail(emailInput, regex) === true) {
+    return true;
+  }
 });
