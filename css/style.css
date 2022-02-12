@@ -30,7 +30,7 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 100px);
   padding-top: 75px;
 }
 
@@ -92,14 +92,33 @@ body {
   gap: 10px;
 }
 
-.site-preview__form-input {
-  font-size: 12px;
-  border: 1px solid var(--pale-blue);
+.site-preview__input-container {
   width: 70%;
   max-width: 262px;
   min-height: 38px;
+}
+
+.site-preview__input-message {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--light-red);
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+}
+
+.site-preview__form-input {
+  font-size: 12px;
+  border: 1px solid var(--pale-blue);
+  width: 100%;
+  min-height: 38px;
   border-radius: 25px;
   padding: 0 25px;
+  color: var(--very-dark-blue);
+}
+
+.site-preview__form-input--invalid {
+  border-color: var(--light-red);
 }
 
 .site-preview__form-input::-webkit-input-placeholder {
@@ -169,7 +188,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 120px;
+  min-height: 100px;
   gap: 25px;
 }
 
@@ -236,6 +255,15 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+  .site-logo {
+    max-width: 87px;
+  }
+  .site-preview__title {
+    font-size: 45px;
+  }
+  .site-preview__sub-text {
+    font-size: 19px;
+  }
   .site-preview__form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -244,7 +272,29 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 38px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-height: 100px;
+  }
+  .site-preview__form-button {
+    max-width: 200px;
+    min-height: 56px;
+    border-radius: 50px;
+    font-size: 16px;
+  }
+  .site-preview__input-message {
+    text-align: left;
+    padding-left: 25px;
+  }
+  .site-preview__input-container {
+    width: 100%;
+    max-width: 420px;
+  }
+  .site-preview__form-input {
+    max-width: 420px;
+    min-height: 56px;
+    font-size: 15px;
   }
   .site-preview__inform {
     height: calc(100vh - 415px);
@@ -258,7 +308,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    min-height: 453px;
+    min-height: 510px;
     max-height: 600px;
     gap: 16px;
   }

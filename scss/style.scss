@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 100px);
   padding-top: 75px;
   // padding-bottom: 40px;
 }
@@ -85,14 +85,33 @@ body {
     gap: 10px;
   }
 
-  &__form-input {
-    font-size: 12px;
-    border: 1px solid var(--pale-blue);
+  &__input-container {
     width: 70%;
     max-width: 262px;
     min-height: 38px;
+  }
+
+  &__input-message {
+    margin-top: 4px;
+    font-size: 11px;
+    color: var(--light-red);
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__form-input {
+    font-size: 12px;
+    border: 1px solid var(--pale-blue);
+    width: 100%;
+    min-height: 38px;
     border-radius: 25px;
     padding: 0 25px;
+    color: var(--very-dark-blue);
+
+    &--invalid {
+      border-color: var(--light-red);
+    }
 
     &::placeholder {
       color: var(--pale-blue);
@@ -140,7 +159,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  min-height: 120px;
+  min-height: 100px;
   gap: 25px;
 
   &__social-media-list {
@@ -194,11 +213,47 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+  .site-logo {
+    max-width: 87px;
+  }
+
   .site-preview {
+    &__title {
+      font-size: 45px;
+    }
+
+    &__sub-text {
+      font-size: 19px;
+    }
+
     &__form {
       flex-direction: row;
       justify-content: center;
-      height: 38px;
+      align-items: flex-start;
+      min-height: 100px;
+    }
+
+    &__form-button {
+      max-width: 200px;
+      min-height: 56px;
+      border-radius: 50px;
+      font-size: 16px;
+    }
+
+    &__input-message {
+      text-align: left;
+      padding-left: 25px;
+    }
+
+    &__input-container {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    &__form-input {
+      max-width: 420px;
+      min-height: 56px;
+      font-size: 15px;
     }
 
     &__inform {
@@ -206,7 +261,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 453px;
+      min-height: 510px;
       max-height: 600px;
       gap: 16px;
     }
