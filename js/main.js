@@ -2,7 +2,7 @@ const button = document.querySelector(".site-preview__form-button");
 const emailInput = document.querySelector(".site-preview__form-input");
 const regex =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+const form = document.querySelector(".site-preview__form");
 let check = false;
 
 function showError(value) {
@@ -20,17 +20,18 @@ function showError(value) {
     //wyswietlenie czerwonego bordera dla inputa
     emailInput.classList.add("site-preview__form-input--invalid");
     check = true;
-  } else return null;
+    return false;
+  } else return false;
 }
 
 function isCorrectEmail(email, reg) {
-  if (reg.test(email.value)) {
+  if (reg.test(email.value) === true) {
     // alert("You have entered an valid email address :)");
     return true;
-  } else {
+  } else if (reg.test(email.value) === false) {
     // alert("You have entered an invalid email address!");
     return false;
-  }
+  } else return false;
 }
 
 function resetMessage() {
@@ -48,3 +49,7 @@ button.addEventListener("click", () =>
 
 emailInput.addEventListener("click", () => resetMessage());
 emailInput.addEventListener("input", () => resetMessage());
+form.addEventListener("submit", (e) => {
+  if (isCorrectEmail(emailInput, regex) === false) e.preventDefault();
+  else if (isCorrectEmail(emailInput, regex) === true) return true;
+});
